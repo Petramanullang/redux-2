@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { decrement, increment } from "./reducer/counterSlice";
 import { toggle } from "./reducer/toggleSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Card from "./components/Card";
+import ToDoComponent from "./components/ToDoComponent";
+import ToDoComponentById from "./components/ToDoByIdComponent";
 
 function App() {
   const toggleReducer = useSelector((state) => state.toggle.value);
   const dispatch = useDispatch();
+
   return (
-    <>
-      <div className="flex flex-col justify-center items-center gap-5 pt-56">
+    <div className="App">
+        <img
+          src="./src/assets/Pixel.png"
+          alt=""
+          className="-z-20 blur-sm h-full md:h-auto w-full brightness-75 fixed top-0"
+        />
+      <div className="flex flex-col justify-center z-10 items-center gap-5 p-10 shadow-2xl rounded-3xl m-10">
         <h1 className="text-3xl font-bold text-center text-[#FAF0E6]">
           Hello World
         </h1>
@@ -37,8 +45,10 @@ function App() {
             <Card />
           </div>
         </div>
+        <ToDoComponent />
+        <ToDoComponentById />
       </div>
-    </>
+    </div>
   );
 }
 
