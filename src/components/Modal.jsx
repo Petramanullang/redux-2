@@ -44,7 +44,6 @@ const Modal = () => {
 
       <div
         id="default-modal"
-        tabindex="-1"
         aria-hidden="true"
         className="hidden overflow-y-auto overflow-x-hidden fixed md:left-1/4 md:top-1/4 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div className="relative p-4 w-full max-w-2xl max-h-full">
