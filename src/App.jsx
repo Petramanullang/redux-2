@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { decrement, increment } from "./reducer/counterSlice";
 import { toggle } from "./reducer/toggleSlice";
 import { useDispatch, useSelector } from "react-redux";
